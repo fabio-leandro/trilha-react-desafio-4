@@ -28,6 +28,10 @@ const Login = () => {
     reValidateMode: "onChange",
   });
 
+  const makeLoginIn = () => {
+    console.log("TESTE")
+  }
+
   return (
     <Container>
       <LoginContainer>
@@ -49,7 +53,7 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" onClick={makeLoginIn} disabled={isValid ? false : true} />
         </Column>
       </LoginContainer>
     </Container>
